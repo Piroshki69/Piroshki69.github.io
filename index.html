@@ -42,14 +42,18 @@
             z-index: -1;
         }
 
-        /* Image Styling */
-        .logo-image {
+        /* Logo Image Styling */
+        .logo-wrapper {
             position: absolute;
-            top: 5vh; /* 5vh gap from the top */
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 50%; /* Adjust size as needed */
-            z-index: 2;
+            top: 5vh;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .logo-img {
+            max-width: 80%;
+            height: auto;
         }
 
         /* Centered Navigation */
@@ -58,7 +62,6 @@
             justify-content: space-evenly;
             align-items: center;
             width: 80%;
-            z-index: 1;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -85,17 +88,43 @@
             font-size: 30px;
         }
 
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .nav a {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav a {
+                font-size: 30px;
+            }
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav a {
+                font-size: 20px;
+            }
+            .logo-img {
+                max-width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
-
     <div class="custom-container">
         <video autoplay muted loop>
             <source src="https://www.dropbox.com/scl/fi/5ea3s319yuq3m49ahxoim/video.mp4?rlkey=rxmuwrxng0xm58hbqfhpq8qfn&st=bb5ojk5w&raw=1" type="video/mp4">
         </video>
         
-        <!-- Logo Image Positioned at the Top with a 5vh Gap -->
-        <img src="https://www.dropbox.com/scl/fi/24qzdrqrz2gqcwnwv7k8r/Group-1.png?rlkey=34ww505ftf0na2lvwwku3msan&st=dr1edgl5&raw=1" alt="MACHXVISUALS Logo" class="logo-image">
+        <!-- Logo Image at the Top -->
+        <div class="logo-wrapper">
+            <img src="Group 1.png" alt="MACHXVISUALS Logo" class="logo-img">
+        </div>
 
         <!-- Centered Navigation Text -->
         <div class="nav">
@@ -105,6 +134,5 @@
             <span>Since 2022</span>
         </div>
     </div>
-
 </body>
 </html>

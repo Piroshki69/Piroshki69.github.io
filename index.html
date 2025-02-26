@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Landing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Libre+Caslon+Display&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Container to hold everything */
+        .custom-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            color: white;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Image Styling */
+        .logo-image {
+            position: absolute;
+            top: 5vh; /* 5vh gap from the top */
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 50%; /* Adjust size as needed */
+            z-index: 2;
+        }
+
+        /* Centered Navigation */
+        .nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80%;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav a, .nav span {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: transparent;
+        }
+
+        .nav a {
+            font-size: 75px;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #f4a261;
+        }
+
+        .nav span {
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="custom-container">
+        <video autoplay muted loop>
+            <source src="https://www.dropbox.com/scl/fi/5ea3s319yuq3m49ahxoim/video.mp4?rlkey=rxmuwrxng0xm58hbqfhpq8qfn&st=bb5ojk5w&raw=1" type="video/mp4">
+        </video>
+        
+        <!-- Logo Image Positioned at the Top with a 5vh Gap -->
+        <img src="Group 1.png" alt="MACHXVISUALS Logo" class="logo-image">
+
+        <!-- Centered Navigation Text -->
+        <div class="nav">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <span>Since 2022</span>
+        </div>
+    </div>
+
+</body>
+</html>

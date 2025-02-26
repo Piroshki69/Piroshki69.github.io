@@ -124,6 +124,31 @@
         .dropdown a:hover {
             background-color: #ddd;
         }
+         /* Media Queries for Responsiveness */
+         @media (max-width: 1200px) {
+            .nav a {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav a {
+                font-size: 30px;
+            }
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav a {
+                font-size: 20px;
+            }
+            .logo-img {
+                max-width: 90%;
+            }
+        
     </style>
     <script>
         function toggleDropdown() {

@@ -148,7 +148,14 @@
             .logo-img {
                 max-width: 90%;
             }
-        
+                    /* Prevent fullscreen video on mobile */
+        @media (max-width: 768px) {
+            video {
+                object-fit: contain;
+                height: auto;
+            }
+        }
+        }
     </style>
     <script>
         function toggleDropdown() {
@@ -169,17 +176,18 @@
         window.onload = () => {
             setLanguage('en');
         };
+        
     </script>
 </head>
 <body>
 
     <div class="custom-container">
         <video autoplay muted loop>
-            <source src="https://www.dropbox.com/scl/fi/5ea3s319yuq3m49ahxoim/video.mp4?rlkey=rxmuwrxng0xm58hbqfhpq8qfn&st=bb5ojk5y&raw=1" type="video/mp4">
+            <source src="video (1).mp4" type="video/mp4">
         </video>
 
         <div class="logo-wrapper">
-            <img src="https://www.dropbox.com/scl/fi/24qzdrqrz2gqcwnwv7k8r/Group-1.png?rlkey=34ww505ftf0na2lvwwku3msan&st=hyo25q8y&raw=1" alt="MACHXVISUALS Logo" class="logo-img">
+            <img src="Group 1.png" alt="MACHXVISUALS Logo" class="logo-img">
         </div>
 
         <div class="language-button" onclick="toggleDropdown()">

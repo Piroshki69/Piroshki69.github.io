@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Over+the+Rainbow&display=swap');
 
 /* Image Section */
 .image-container {
@@ -65,4 +67,79 @@
     border-radius: 10px;
     display: block;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7); /* Soft shadow */
+}
+/* Contact Page Layout */
+.contact-body {
+    position: relative;
+    height: calc(120vh - 80px); /* 100vh minus header height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./Assets/featured.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures smooth parallax */
+}
+
+/* Contact Box */
+.contact-box {
+    width: 100vw;
+    height: 50vh;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    padding-left: 50px;
+}
+
+/* CONTACT text */
+.contact-text {
+    font-size: 200px;
+    font-family: 'Permanent Marker', cursive;
+    position: relative; /* Keeps it above US */
+    z-index: 2; /* Higher stack level */
+    white-space: nowrap;
+    top: -25%;
+}
+
+/* US text (inside CONTACT) */
+.us-text {
+    font-size: 500px;
+    font-family: 'Over the Rainbow', cursive;
+    color: red;
+    position: absolute; /* Stacks behind CONTACT */
+    top: -250px; /* Slight offset so it peeks behind */
+    left: 45%;
+    transform: translateX(-50%);
+    z-index: 1; /* Lower stack level */
+    white-space: nowrap;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* New contact-info box */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    padding-left: 240px;
+    margin-top: 10px; /* To avoid sticking to the text above */
+    height: 100%; /* Allow it to take full available height */
+}
+
+/* New email text */
+.contact-email {
+    font-size: 50px;
+    font-family: 'League Spartan', sans-serif;
+    text-align: left; /* Align left */
+    z-index: 3;
+    margin-bottom: 10px; /* Space between email and details */
+}
+
+/* New details text */
+.contact-details {
+    font-size: 20px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: lighter;
+    text-align: left;
+    z-index: 3;
 }

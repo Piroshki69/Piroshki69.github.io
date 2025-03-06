@@ -73,7 +73,6 @@
     position: relative;
     height: calc(120vh - 80px); /* 100vh minus header height */
     display: flex;
-    justify-content: center;
     align-items: center;
     background-image: url('./Assets/featured.jpg'); /* Replace with actual image path */
     background-size: cover;
@@ -116,30 +115,145 @@
     text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* New contact-info box */
+/* Contact Info Box */
 .contact-info {
     display: flex;
     flex-direction: column;
+    margin-left: 7vw;
     justify-content: center; /* Center content vertically */
-    padding-left: 240px;
-    margin-top: 10px; /* To avoid sticking to the text above */
     height: 100%; /* Allow it to take full available height */
+    width: auto; /* Let it shrink/grow */
 }
 
-/* New email text */
+/* Email Text */
 .contact-email {
-    font-size: 50px;
+    font-size: 50px; /* Scales with screen size */
     font-family: 'League Spartan', sans-serif;
-    text-align: left; /* Align left */
-    z-index: 3;
-    margin-bottom: 10px; /* Space between email and details */
+    text-align: left;
+    margin-bottom: 10px;
 }
 
-/* New details text */
+/* Details Text */
 .contact-details {
-    font-size: 20px;
+    font-size: 20px; /* Scales with screen size */
     font-family: 'League Spartan', sans-serif;
     font-weight: lighter;
     text-align: left;
-    z-index: 3;
+}
+@media (max-width: 1700px){
+    .contact-info{
+        margin-left: 3vw;
+    }
+}
+@media (max-width: 1555px){
+    .contact-text {
+        font-size: 150px;
+    }
+    
+    .us-text {
+        font-size: 400px;
+        top: -200px;
+    }
+    .contact-info{
+        margin-left: 11vw;
+    }
+    .contact-email{
+        font-size: 40px;
+    }
+    .contact-details{
+        font-size: 17px;
+    }
+}
+@media (max-width: 1330px){
+    .contact-info{
+        margin-left: 5vw;
+    }
+    .contact-email{
+        font-size: 35px;
+    }
+    .contact-box {
+        height: 40vh;
+    }
+}
+@media (max-width: 1188px){
+    .contact-email{
+        font-size: 30px;
+    }
+    .contact-text {
+        font-size: 130px;
+    }
+    
+    .us-text {
+        font-size: 350px;
+        top: -180px;
+    }
+    .contact-box {
+        height: 35vh;
+    }
+}
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .contact-email{
+        font-size: 27px;
+    }
+    .contact-text {
+        font-size: 80px;
+    }
+    
+    .us-text {
+        font-size: 300px;
+        top: -130px;
+    }
+    .contact-box {
+        height: 35vh;
+    }
+    .contact-info{
+        z-index: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-email{
+        font-size: 27px;
+    }
+    .contact-text {
+        font-size: 90px;
+    }
+    .contact-info{
+        display: flex;
+        justify-content: center;
+    }
+    .us-text {
+        font-size: 300px;
+        top: -100px;
+    }
+    .contact-box {
+        display: flex;
+        height: 60vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-email{
+        font-size: 23px;
+    }
+    .contact-details{
+        font-size: 13px;
+    }
+    .contact-text {
+        font-size: 70px;
+    }
+    .contact-info{
+        display: flex;
+        justify-content: center;
+    }
+    .us-text {
+        font-size: 250px;
+        top: -50px;
+    }
+
 }

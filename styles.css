@@ -259,7 +259,16 @@ footer {
         font-size: 20px;
     }
 }
-
+@media (max-width: 1200px) {
+    .background-video {
+        display: none !important;
+    }
+    .custom-container {
+        background-image: url('./Assets/films.jpg')!important; /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+    }
+}
 /* Mobile Devices (Below 768px) */
 @media (max-width: 768px) {
     header {
